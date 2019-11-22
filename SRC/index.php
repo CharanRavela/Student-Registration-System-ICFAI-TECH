@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
-    <title>TimeTable Management System</title>
+    <title>Student Registration Management System</title>
 	<link href="assets/img/icfai.jfif" rel= "icon"/>
     <!-- BOOTSTRAP CORE STYLE CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet"/>
@@ -24,15 +24,15 @@
     <div class="container">
         <div align="center">
 		    <img src="assets/img/icfai.jfif" alt="icon" style="width:64px" align="left"/> 
-            <h3 align="center">ICFAI University, ITS</h3>
+            <h3 align="center">ICFAI UNIVERSITY, ITS</h3>
         </div>
     </div>
 </div>
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
-    <ol class="carousel-indicators" style="margin-bottom: 220px">
-        <li data-target="#myCarousel" data-slide-to="0" ></li>
+    <ol class="carousel-indicators" style="margin-bottom: 220px;">
+        <li data-target="#myCarousel" data-slide-to="0"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="3"></li>
@@ -43,7 +43,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
         <div class="item">
-            <img src="assets/img/lab1.jpg" alt="Chania">
+            <img src="assets/img/lab1.jpg" alt="Failed to load">
         </div>
 
         <div class="item">
@@ -76,13 +76,13 @@
             id="adminLoginBtn" class="btn btn-success btn-lg">ADMIN LOGIN
     </button>
 	<button data-scroll-reveal="enter from the bottom after 0.2s"
-            id="studentLoginBtn" class="btn btn-success btn-lg" >STUDENT LOGIN
+            id="studentLoginBtn" class="btn btn-info btn-lg" >STUDENT LOGIN
     </button>
 </div>
 <br>
 <div align="center">
     <form name="semester_selection" data-scroll-reveal="enter from the bottom after 0.2s" action="studentvalidation.php" method="post" onsubmit = "return validation()">
-        <select id="select_semester" name="select_semester" class="list-group-item" style="width:180px" required>
+        <select id="select_semester" name="select_semester" class="list-group-item" style="width:200px" required>
             <option selected disabled>Select semester</option>
 			<option value="All">Get all semesters</option>
             <?php
@@ -105,13 +105,12 @@
 			}
             $q = mysqli_query(mysqli_connect("localhost", "root", "", "ttms"),$s);
                 
-				//"SELECT * FROM semesters where (semid%2)= (year(curdate())%2) ");
             while ($row = mysqli_fetch_assoc($q)) {
                 echo " \"<option value=\"{$row['semid']}\">{$row['semid']}</option>\"";
             }
             ?>
         </select>
-		<button type="submit" class="btn btn-info btn-lg" style="margin-top: 10px; margin-bottom: 20px">Get Master TimeTable</button>
+		<button type="submit" class="btn btn-success btn-lg" style="margin-top: 10px; margin-bottom: 20px ;width:200px">Semester TimeTable</button>
     </form>
 </div>
 <!-- The Modal -->
@@ -119,7 +118,7 @@
 
     <!-- Modal content -->
     <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header" style="background-color:rgba(28, 43, 75, 1)">
             <span class="close">&times</span>
             <h2 id="popupHead">Modal Header</h2>
         </div>
@@ -128,46 +127,46 @@
             <div style="display:none" id="adminForm">
                 <form action="adminFormvalidation.php" method="POST">
                     <div class="form-group">
-                        <label for="adminname">Username</label>
+                        <label for="adminname">Username:</label>
                         <input type="text" class="form-control" id="adminname" name="UN" placeholder="Username ...">
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
+                        <label for="password">Password:</label>
                         <input type="password" class="form-control" id="password" name="PASS"
                                placeholder="Password ...">
                     </div>
-                    <div align="right">
-                        <input type="submit" class="btn btn-default" name="LOGIN" value="LOGIN">
+                    <div align="Center" style="margin-bottom : 10px">
+                        <input type="submit" class="btn btn-default" name="LOGIN" value="LOGIN" style="background-color: #4CAF50;color:white">
                     </div>
                 </form>
             </div>
         </div>
         <!--Faculty Login Form-->
-        <div style="display:none" id="facultyForm">
+        <div style="display:none;" id="facultyForm" >
             <form action="facultyformvalidation.php" method="POST" style="overflow: hidden">
-                <div class="form-group">
-                    <label for="facultyno">Faculty No.</label>
-                    <input type="text" class="form-control" id="facultyno" name="FN" placeholder="Faculty No. ...">
+            <label for="facultyno" style="margin-left:5%">Faculty No:</label>
+                <div class="form-group" align="center">
+                    <input type="text" class="form-control" id="facultyno" name="FN" placeholder="Faculty No. ..." style="width:90%">
                 </div>
-                <div align="right">
-                    <button type="submit" class="btn btn-default" name="LOGIN">LOGIN</button>
+                <div  style="margin-bottom : 10px" align="center">
+                    <button  type="submit" class="btn btn-default" name="LOGIN" style="background-color: #4CAF50;color:white;">LOGIN</button>
                 </div>
             </form>
         </div>
 		<!--Student Login Form-->
 		<div style="display:none" id="studentForm">
                 <form action="studentFormvalidation.php" method="POST">
-                    <div class="form-group">
-                        <label for="studentno">Enrollmentno</label>
-                        <input type="text" class="form-control" id="studentno" name="SN" placeholder="Enrollmentno ...">
+                <label for="studentno" style="margin-left:5%" >Enrollment No:</label>
+                    <div class="form-group" align="center">
+                        <input type="text" class="form-control" id="studentno" name="SN" placeholder="Enrollmentno ..." style="width:90%">
                     </div>
-                    <div class="form-group">
-                        <label for="spassword">Password</label>
+                    <label for="spassword" style="margin-left:5%">Password:</label>
+                    <div class="form-group" align="center">
                         <input type="password" class="form-control" id="spassword" name="SPASS"
-                               placeholder="Password ...">
+                               placeholder="Password ..." style="width:90%">
                     </div>
-                    <div align="right">
-                        <input type="submit" class="btn btn-default" name="LOGIN" value="LOGIN">
+                    <div align="Center" style="margin-bottom : 10px">
+                        <input type="submit" class="btn btn-default" name="LOGIN" value="LOGIN" style="background-color: #4CAF50;color:white;">
                     </div>
                 </form>
         </div>
@@ -247,7 +246,7 @@
 <!--HOME SECTION END-->
 <!--HOME SECTION TAG LINE END-->
 
-<div id="faculty-sec">
+<div id="faculty-sec" style="background-color:rgba(28, 43, 75, 1)">
     <div class="container set-pad">
         <div class="row text-center">
             <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
-    <title>TimeTable Management System</title>
+    <title>Student Registration Management System</title>
 	<link href="assets/img/icfai.jfif" rel= "icon"/>
     <!-- BOOTSTRAP CORE STYLE CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet"/>
@@ -100,14 +100,14 @@
     ?>
 </div>
 <div align="center" style="margin-top:20px">
-    <button id="studentmanual" class="btn btn-success btn-lg">ADD STUDENT</button>
+    <button id="studentmanual" class="btn btn-success btn-lg" >ADD STUDENT</button>
 </div>
 
 <div id="myModal" class="modal">
 
     <!-- Modal content -->
     <div class="modal-content" style="margin-top: -60px">
-        <div class="modal-header">
+        <div class="modal-header" style="background-color:rgba(28, 43, 75, 1)">
             <span class="close">&times</span>
             <h2 id="popupHead">Add STUDENT</h2>
         </div>
@@ -146,8 +146,8 @@
                         <input type="text" class="form-control" id="studentemailid" name="SE"
                                placeholder="stu@dent.com ...">
                     </div>
-                    <div align="right">
-                        <input type="submit" class="btn btn-default" name="ADD" value="ADD">
+                    <div align="center">
+                        <input type="submit" class="btn btn-default" name="ADD" value="ADD" style="background-color: #4CAF50;color:white">
                     </div>
                 </form>
             </div>

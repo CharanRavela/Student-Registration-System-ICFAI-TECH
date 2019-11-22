@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
-    <title>TimeTable Management System</title>
+    <title>Student Registration Management System</title>
     <!-- BOOTSTRAP CORE STYLE CSS -->
     <script type="text/javascript" src="assets/js/html2canvas.js"></script>
     <link href="assets/css/bootstrap.css" rel="stylesheet"/>

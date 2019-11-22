@@ -8,7 +8,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
-    <title>TimeTable Management System</title>
+    <title>Student Registration Management System</title>
 	<link href="assets/img/icfai.jfif" rel= "icon"/>
     <!--<script type="text/javascript" src="assets/jsPDF/dist/jspdf.min.js"></script>-->
     <script type="text/javascript" src="assets/js/html2canvas.js"></script>

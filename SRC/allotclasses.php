@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
-    <title>TimeTable Management System</title>
+    <title>Student Registration Management System</title>
 	<link href="assets/img/icfai.jfif" rel= "icon"/>
     <!-- BOOTSTRAP CORE STYLE CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet"/>
@@ -111,7 +111,7 @@ if (isset($_POST['in_class'])) {
         </select>
     </div>
     <div align="center" style="margin-top: 10px;">
-        <button type="submit" class="btn btn-success btn-lg">Allot</button>
+        <button type="submit" class="btn btn-success btn-lg" >Allot</button>
     </div>
 </form>
 

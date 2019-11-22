@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
-    <title>TimeTable Management System</title>
+    <title>Student Registration Management System</title>
 	<link href="assets/img/icfai.jfif" rel= "icon"/>
     <!-- BOOTSTRAP CORE STYLE CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet"/>
@@ -101,7 +101,7 @@
 
     <!-- Modal content -->
     <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header" style="background-color:rgba(28, 43, 75, 1)">
             <span class="close">&times</span>
             <h2 id="popupHead">Add Subject</h2>
         </div>
@@ -150,8 +150,8 @@
                             <option value="Mechanical Engg.">Mechanical Engg.</option>
                         </select>
                     </div>
-                    <div align="right" class="form-group">
-                        <input type="submit" class="btn btn-default" name="ADD" value="ADD">
+                    <div align="center" class="form-group">
+                        <input type="submit" class="btn btn-default" name="ADD" value="ADD" style="background-color: #4CAF50;color:white">
                     </div>
                 </form>
             </div>
