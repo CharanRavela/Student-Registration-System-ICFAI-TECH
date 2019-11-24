@@ -99,7 +99,7 @@ return true;
 function finalvalidation()
 {
     if ($('input[name="select_subjects[]"]:checked').length <6) {
-        alert("you have to select 6 subjects"); 
+        alert("You have to select 6 subjects."); 
         return false;				
 	}
 	else{
@@ -155,7 +155,7 @@ checkboxes = document.getElementsByTagName("input");
 		//validation for more than 6 subjects
 				if ( count >6 && flag )
 				{
-					alert("you can select only 6 subjects for this semester");
+					alert("Total Subjects You can select for semester are only 6");
 			        subject[currentRow.rowIndex-1].checked=false;
 					flag = 0;
 			    }	
